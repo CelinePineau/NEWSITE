@@ -1,0 +1,8 @@
+<h2><%= @site.name %></h2>
+<p><%= @site.descrition %></p>
+<%= link_to "Delete",
+  site_path(@site),
+  data: {turbo_method: :delete, turbo_confirm: "Etes vous sûr ?"}
+%>
+<%= link_to "Edit", edit_site_path(@site) %>
+<%= link_to "Retour aux sites", sites_path %>
